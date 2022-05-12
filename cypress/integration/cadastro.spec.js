@@ -47,7 +47,7 @@ describe('Cadastro', () => {
 
         cy.contains('.delivery-method li',entregador.metodo_entrega).click()
 
-        cy.get('dropzone input').attachFile(entregador.cnh)
+        cy.get('.dropzone').attachFile(entregador.cnh,{ subjectType: 'drag-n-drop' })
 
         cy.get('form button[type="submit"]').click()
         
